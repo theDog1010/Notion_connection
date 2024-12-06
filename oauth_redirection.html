@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección OAuth</title>
+</head>
+<body>
+    <h1>Redirección OAuth</h1>
+    <p>Espere mientras lo redirigimos...</p>
+    <script>
+        // Aquí puedes agregar el script para manejar la redirección OAuth
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+        if (code) {
+            // Enviar el código al servidor o manejarlo como sea necesario
+            console.log("Código recibido:", code);
+            window.location.href = "https://www.smartpetcr.com"; // Cambia según tu lógica
+        } else {
+            console.error("No se recibió ningún código.");
+        }
+    </script>
+</body>
+</html>
